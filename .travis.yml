@@ -1,0 +1,6 @@
+language: c#
+services:
+  - docker
+script:
+  - chmod +x build.sh
+  - ./build.sh

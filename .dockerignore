@@ -4,6 +4,18 @@
 .gitignore
 .vs
 .vscode
-*/bin
-*/obj
 **/.toolstarget
+
+# build output directories
+**/bin/
+**/obj/
+**/publish-output/
+
+# non source code files
+Dockerfile*
+**/*.trx
+**/*.md
+**/*.ps1
+**/*.cmd
+**/*.sh
+**/test-results/

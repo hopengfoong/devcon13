@@ -1,0 +1,21 @@
+resources:
+- repo: self
+queue:
+  name: Hosted Ubuntu 1604
+steps:
+- bash: |
+   chmod +x build.sh
+   ./build.sh
+  failOnStderr: true
+
+  displayName: 'Bash Script'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/*.xml'
+  inputs:
+    testResultsFiles: '**/*.xml'
+
+    testRunTitle: 'Unit Tests'
+
+  condition: succeededOrFailed()
+

@@ -1,6 +1,6 @@
 using System;
 
-namespace WebApplication.Models
+namespace Devcon.SampleSite.Models
 {
     public class ErrorViewModel
     {
